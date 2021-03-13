@@ -495,6 +495,8 @@ class Zend_Locale_Format
      */
     public static function isNumber($input, array $options = array())
     {
+        $input = (string) $input;
+
         if (!self::_getUniCodeSupport()) {
             trigger_error('Sorry, your PCRE extension does not support UTF8 which is needed for the I18N core', E_USER_NOTICE);
         }
