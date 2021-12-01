@@ -187,8 +187,8 @@ class Zend_Locale_Math_PhpMath extends Zend_Locale_Math
             return null;
         }
         $op1 = self::normalize($op1);
-        $op2 = self::normalize($op2);
-        if ((int)$op2 == 0) {
+        $op2 = (int) self::normalize($op2);
+        if ($op2 == 0) {
             return null;
         }
         $result = $op1 % $op2;
